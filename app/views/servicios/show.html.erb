@@ -1,0 +1,19 @@
+<h3>Tipo servicio: <%= @servicio.tiposervisio %></h3>
+<h3>Tarifa: $ <%= @servicio.tarifa %></h3>
+
+
+<h3>Animales atendido: </h3>
+<%= @animals.each do |animal| %>
+  <strong>Nombre: </strong>
+  <%= animal.nombre %>
+  <strong>Raza: </strong>
+  <%= animal.raza %>
+  <strong>Color: </strong>
+  <%= animal.color %>
+  <br>
+  <% end %>
+
+
+
+<%= link_to 'Edit', edit_servicio_path(@servicio) %> |
+<%= link_to 'Back', servicios_path %>

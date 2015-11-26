@@ -1,0 +1,25 @@
+<%= form_for(@historial) do |f| %>
+  <% if @historial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@historial.errors.count, "error") %> prohibited this historial from being saved:</h2>
+
+      <ul>
+      <% @historial.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :animal_id %><br>
+    <%= f.select( "animal_id",Animal.all.collect{|l| [l.nombre, l.id ] }, {include_blank: 'Seleccione Animal'}) %>
+  </div>
+  <div class="field">
+    <%= f.label :servicio_id %><br>
+    <%= f.select( "servicio_id",Servicio.all.collect{|l| [l.tiposervisio, l.id ] }, {include_blank: 'Seleccione Servicio'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
