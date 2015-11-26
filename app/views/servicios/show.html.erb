@@ -1,17 +1,18 @@
-<h3>Tipo servicio: <%= @servicio.tiposervisio %></h3>
-<h3>Tarifa: $ <%= @servicio.tarifa %></h3>
+<p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Tipo servicio:</strong>
+    <%= @servicio.tiposervisio %>
+  </p>
+
+  <p>
+    <strong>Tarifa:</strong>
+    <%= @servicio.tarifa %>
+  </p>
 
 
-<h3>Animales atendido: </h3>
-<%= @animals.each do |animal| %>
-  <strong>Nombre: </strong>
-  <%= animal.nombre %>
-  <strong>Raza: </strong>
-  <%= animal.raza %>
-  <strong>Color: </strong>
-  <%= animal.color %>
-  <br>
-  <% end %>
+
+
 
 
 

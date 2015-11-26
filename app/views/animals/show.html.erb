@@ -1,17 +1,34 @@
-<h1>Cliente: <%= @animal.cliente.nombre %></h1>
-<h2>Animal: <%= @animal.nombre %></h2>
-<h2>Color: <%= @animal.color %></h2>
-<h2>Raza: <%= @animal.raza %></h2>
+<p id="notice"><%= notice %></p>
 
-<p>Servicios del Animal: </p>
-<% @servicios.each do |servicio| %>
+  <p>
+    <strong>Nombre:</strong>
+    <%= @animal.nombre %>
+  </p>
 
-  <strong>Tipo servicio:</strong>
-  <%= servicio.tiposervisio %>
-  <strong>Tarifa:</strong>
-  <%= servicio.tarifa %>
-  <br>
-  <% end %>
+  <p>
+    <strong>Raza:</strong>
+    <%= @animal.raza %>
+  </p>
+
+  <p>
+    <strong>Color:</strong>
+    <%= @animal.color %>
+  </p>
+
+  <p>
+    <strong>Tamano:</strong>
+    <%= @animal.tamano %>
+  </p>
+
+  <p>
+    <strong>Fecha Nacimiento:</strong>
+    <%= @animal.fechanacimiento %>
+  </p>
+
+  <p>
+    <strong>cliente:</strong>
+    <%= @animal.cliente.nombre %>
+  </p>
 
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |
