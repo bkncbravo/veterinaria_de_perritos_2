@@ -1,5 +1,6 @@
 class ServiciosController < ApplicationController
   before_action :set_servicio, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!
 
   # GET /servicios
   # GET /servicios.json

@@ -1,5 +1,6 @@
 class HistorialsController < ApplicationController
   before_action :set_historial, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_usuario!
 
   # GET /historials
   # GET /historials.json
